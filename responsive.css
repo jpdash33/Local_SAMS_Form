@@ -1,0 +1,203 @@
+/* ==========================
+   Tablet
+========================== */
+
+@media (max-width:768px){
+
+    .top_view{
+        padding:15px;
+    }
+
+    .login{
+        max-width:380px;
+        padding:35px 25px;
+    }
+
+    .login_icon{
+        width:75px;
+        height:75px;
+        font-size:32px;
+    }
+
+    .logout_btn{
+        top:15px;
+        right:15px;
+    }
+
+}
+
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width:480px){
+
+    .top_view h1{
+        font-size:1.35rem;
+    }
+
+    .top_view h3{
+        font-size:.8rem;
+    }
+
+    .login_box{
+        padding:15px;
+        min-height:calc(100dvh - 100px);
+    }
+
+    .login{
+        padding:25px 18px;
+    }
+
+    .login_icon{
+        width:65px;
+        height:65px;
+        font-size:28px;
+    }
+
+    .login h2{
+        font-size:22px;
+    }
+
+    .login p{
+        font-size:14px;
+    }
+
+    .input_box{
+        height:48px;
+    }
+
+    .input_box input{
+        font-size:15px;
+    }
+
+    .login_btn{
+        height:48px;
+        font-size:15px;
+    }
+
+    .logout_btn{
+        top:10px;
+        right:10px;
+
+        padding:8px 12px;
+        font-size:13px;
+    }
+
+}
+
+
+/* ==========================
+   Extra Small Phones
+========================== */
+
+@media (max-width:350px){
+
+    .top_view h1{
+        font-size:1.15rem;
+    }
+
+    .top_view h3{
+        display:none;
+    }
+
+    .login{
+        padding:20px 15px;
+    }
+
+    .login_icon{
+        width:55px;
+        height:55px;
+        font-size:24px;
+    }
+
+    .logout_btn{
+        padding:7px 10px;
+        font-size:12px;
+    }
+
+}
+
+
+/* for addmission form*/
+
+/* ===========================
+      TABLET
+=========================== */
+
+@media (max-width:768px){
+
+    .admission_form{
+        width:95%;
+        padding:25px;
+    }
+
+    .admission_form h3{
+        font-size:1.25rem;
+    }
+
+    .admission_form input{
+        padding:11px;
+        font-size:15px;
+    }
+
+}
+
+
+/* ===========================
+      MOBILE
+=========================== */
+
+@media (max-width:480px){
+
+    .admission_form{
+        width:95%;
+        padding:18px;
+        border-radius:15px;
+    }
+
+    .admission_form h3{
+        font-size:1.1rem;
+    }
+
+    .admission_form input{
+        font-size:14px;
+        padding:10px;
+    }
+
+    .admission_form button{
+        font-size:15px;
+        padding:13px;
+    }
+
+    .admission_form input[type="radio"]{
+        margin-left:10px;
+    }
+
+}
+
+
+/* ===========================
+      EXTRA SMALL
+=========================== */
+
+@media (max-width:320px){
+
+    .admission_form{
+        padding:15px;
+    }
+
+    .admission_form h3{
+        font-size:1rem;
+    }
+
+    .admission_form input{
+        font-size:13px;
+    }
+
+    .admission_form button{
+        font-size:14px;
+    }
+
+}

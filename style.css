@@ -1,0 +1,262 @@
+:root {
+    --color1: #082677;
+    --color2: #4c5da0;
+    --color3: #ff6f3d;
+    --color4: #8bb825;
+    --color5: #925FE2;
+
+    --bg-color1: #81007F;
+    --bg-color2: #1E1161;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background:
+        radial-gradient(circle at top left, #A855F7 0%, transparent 40%),
+        radial-gradient(circle at bottom right, #2563EB 0%, transparent 40%),
+        linear-gradient(135deg, #0F172A, #111827, #1E293B);
+     background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    color: white;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    overflow-x: hidden;
+}
+
+
+.top_view{
+    width:100%;
+    padding:18px 20px;
+    text-align:center;
+}
+
+.top_view h1{
+    font-size:clamp(1.4rem,3vw,2rem);
+    line-height:1.3;
+}
+
+.top_view h3{
+    margin-top:8px;
+    font-size:clamp(.85rem,2vw,1rem);
+    color:#cbd5e1;
+}
+
+#homeHeader{
+    display:none;
+}
+
+
+
+/* ===========================
+      ADMISSION FORM
+=========================== */
+
+.admission_form{
+    width: min(900px, 95%);
+    margin: 30px auto;
+    padding: 30px;
+
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+
+    color: white;
+    line-height: 2;
+}
+
+.admission_form h3{
+    text-align: center;
+    /* color: white; */
+    color: var(--color3);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    text-decoration: underline;
+}
+
+.admission_form hr{
+    border: none;
+    height: 1px;
+    background: rgba(255,255,255,.15);
+    margin: 25px 0;
+}
+
+.admission_form input{
+    width: 100%;
+    margin: 8px 0 18px;
+    padding: 12px 15px;
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 10px;
+
+    background: rgba(255,255,255,.08);
+    color: white;
+
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.admission_form input::placeholder{
+    color:#cbd5e1;
+}
+
+.admission_form input:focus{
+    outline:none;
+    border-color:#7C3AED;
+    box-shadow:0 0 12px rgba(124,58,237,.35);
+}
+
+.admission_form input[type="radio"]{
+    width:auto;
+    margin-left:15px;
+    margin-right:5px;
+}
+
+.admission_form input[type="file"]{
+    padding:10px;
+}
+
+.admission_form button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,#2563EB,#7C3AED);
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.admission_form button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(37,99,235,.35);
+}
+
+/* droup down */
+.admission_form select{
+    width:100%;
+    margin:8px 0 18px;
+    padding:12px 15px;
+
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:10px;
+
+    background:rgba(255,255,255,.08);
+    color:white;
+
+    font-size:15px;
+    box-sizing:border-box;
+    cursor:pointer;
+}
+
+.admission_form select:focus{
+    outline:none;
+    border-color:#7C3AED;
+    box-shadow:0 0 12px rgba(124,58,237,.35);
+}
+
+/* Dropdown options */
+.admission_form select option{
+    background:#1E293B;
+    color:white;
+}
+
+/* =======================
+      FACILITIES
+======================= */
+
+.facility_container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    margin:30px 0;
+}
+
+.facility_card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+.facility_icon{
+    width:60px;
+    height:60px;
+    background:#ffe7c2;
+    border-radius:14px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    margin-bottom:20px;
+
+}
+
+.facility_card h2{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.facility_card p{
+    color:#d6d6d6;
+    margin-bottom:20px;
+}
+
+.radio_box{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.radio_box:hover{
+    border-color:#7C3AED;
+    background:rgba(124,58,237,.08);
+}
+
+.radio_box input{
+    width:20px;
+    height:20px
+}
+
+.warning_box{
+    margin-top:30px;
+    padding:20px;
+    border-radius:15px;
+    background:#ffe7c2;
+    color:#4d2d00;
+    border:1px solid #f3c77d;
+    line-height:1.7;
+}
+
+/* =================================
+      SUBMIT BUTTON HOVER EFFECT
+==================================== */
+
+#submit:hover{
+    background: linear-gradient(135deg,#8bb825,#6d941d);
+}
+
