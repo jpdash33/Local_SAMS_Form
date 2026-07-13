@@ -1,0 +1,20 @@
+// function form_submit()
+// {
+//     const student = {};
+//     const fields = document.querySelectorAll("input, select");
+
+//     for(const input of fields)
+//     {
+//         console.log(input.type, input.id, input.value);
+//         if(input.value.trim() === "")
+//         {
+
+//             alert("⚠️ Please fill all fields...");
+//             return;
+//         }
+
+//         student[input.id] = input.value;
+//     }
+
+//     console.log(student);
+// }

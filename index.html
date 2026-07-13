@@ -68,190 +68,195 @@
             </div>
         </header>
 
-        <div class="admission_form">
 
-            <h3> STUDENT INFORMATION </h3><br>
-            Student's Name <input type="text" placeholder="Full Name" required>
-            Father's Name <input type="text" placeholder="Full Name" required>
-            Mother's Name <input type="text" placeholder="Full Name" required>
-            D.O.B. <input type="date" placeholder="DD/MM/YYYY" required>
+        <form id="studentForm">
+            <div class="admission_form">
 
-            Gender <br>
-            Male <input type="radio" name="gender" value="Male">
-            Female <input type="radio" name="gender" value="Male">
-            Other <input type="radio" name="gender" value="Male"><br>
+                <h3> STUDENT INFORMATION </h3><br>
+                Student's Name <input type="text" placeholder="Full Name" id="std_name" required>
+                Father's Name <input type="text" placeholder="Full Name" id="f_name" required>
+                Mother's Name <input type="text" placeholder="Full Name" id="m_name" required>
+                D.O.B. <input type="date" placeholder="DD/MM/YYYY" id="dob" required>
 
-            Studebnt Photo: <input type="file" placeholder="phote">
-            <hr><br>
+                Gender
+                <div class="gender_box">
 
-            <!------------------------------------------------------------------------------------------------>
-
-            <h3> CONTACT DETAILS </h3><br>
-            Student mobile number <input type="tel" placeholder="10-digit number" required>
-            Parent's mobile number <input type="tel" placeholder="10-digit number" required>
-            Student mail Id <input type="email" placeholder="example123@gmail.com" required>
-            <hr><br>
-
-            <!------------------------------------------------------------------------------------------------>
-
-            <h3> OTHER DETAILS </h3><br>
-            Blood Group
-            <select name="bloodgrp" id="bloodgrp">
-                <option value="" disabled selected>Select blood group</option>
-                <option value="A+">A+</option>
-                <option value="A-">A-</option>
-                <option value="B+">B+</option>
-                <option value="O+">O+</option>
-                <option value="O-">O-</option>
-                <option value="AB+">AB+</option>
-                <option value="AB-">AB-</option>
-            </select><br>
-
-            Category
-            <select name="category" id="category">
-                <option value="" disabled selected>Select Category</option>
-                <option value="gen">General</option>
-                <option value="OBC">OBC</option>
-                <option value="SC">SC</option>
-                <option value="ST">ST</option>
-                <option value="EWS">EWS</option>
-            </select><br>
-
-            Religion <input type="text" placeholder="Religion..." required>
-            <hr><br>
-
-            <!------------------------------------------------------------------------------------------------>
-
-            <h3> PERMANENT ADDRESS </h3><br>
-            House No. <input type="text" required>
-            Village/City <input type="text" required>
-            Street <input type="text" required>
-            District <input type="text" required>
-            State <input type="text" required>
-            Country <input type="text" required>
-            PIN Code <input type="number" required>
-            <hr><br>
-
-            <h3> CURRENT ADDRESS </h3><br>
-            House No. <input type="text" required>
-            Village/City <input type="text" required>
-            Street <input type="text" required>
-            District <input type="text" required>
-            State <input type="text" required>
-            Country <input type="text" required>
-            PIN Code <input type="number" required>
-            <hr><br>
-
-
-            <!------------------------------------------------------------------------------------------------>
-
-            <h3> 10TH STANDARD </h3><br>
-            Board <input type="text" required>
-            School Name <input type="text" required>
-            Scholl Roll No. <input type="text" required>
-            Passing Year <input type="number" required>
-            Student Total Mark <input type="number" required>
-            Percentage <input type="number" required>
-            10th Marksheet <input type="file">
-            Character Certificate <input type="file">
-
-            <h3> 12TH STANDARD </h3><br>
-            Board <input type="text" required>
-            School Name <input type="text" required>
-            Scholl Roll No. <input type="text" required>
-            Passing Year <input type="number" required>
-            Student Total Mark <input type="number" required>
-            Percentage <input type="number" required><br>
-            Stream
-            <select name="Stream" id="Stream">
-                <option value="" disabled selected>Select Stream</option>
-                <option value="sci">Science</option>
-                <option value="com">Commerce</option>
-                <option value="art">Arts</option>
-                <option value="vocational">Vocational</option>
-                <option value="ther">Others</option>
-            </select>
-            12th Marksheet <input type="file">
-            Character Certificate <input type="file">
-            <hr><br>
-
-            <!------------------------------------------------------------------------------------------------>
-
-            <h3> IDENTITY INFORMATION </h3>
-            Aadhaar number <input type="number" placeholder="12-digit Aadhaar number" required>
-            ABC Id <input type="number" required>
-            Aadhaar Card <input type="file">
-            Student ignature <input type="file">
-            <hr><br>
-
-            <!------------------------------------------------------------------------------------------------>
-
-            <!-- <h3> FACILITIES </h3>   
-            Hostel: (On-campus residential accommodation.)
-            <input type="radio" name="hostel">  Yes, I need a hostel
-            <input type="radio" name="hostel">  No, not required
- 
-            Transport: (Campus bus service for daily commute)
-            <input type="radio" name="hostel">  Yes, I need a hostel
-            <input type="radio" name="hostel">  No, not required
-
-            Before you submit — double check your Aadhaar number, mobile numbers, and board exam registration numbers. 
-            These can't be edited once your application is reviewed. -->
-
-            <!-- ================= FACILITIES ================= -->
-
-            <h3>FACILITIES</h3>
-
-            <div class="facility_container">
-
-                <!-- Hostel -->
-                <div class="facility_card">
-                    <div class="facility_icon">🏠</div>
-                    <h2>Hostel</h2>
-                    <p>On-campus residential accommodation.</p>
                     <label class="radio_box">
-                        <input type="radio" name="hostel" value="yes">
-                        <span>Yes, I need a hostel</span>
+                        <input type="radio" name="gender" value="Male">
+                        <span>Male</span>
                     </label>
 
                     <label class="radio_box">
-                        <input type="radio" name="hostel" value="no">
-                        <span>No, not required</span>
+                        <input type="radio" name="gender" value="Female">
+                        <span>Female</span>
                     </label>
+
+                    <label class="radio_box">
+                        <input type="radio" name="gender" value="Other">
+                        <span>Other</span>
+                    </label>
+
                 </div>
 
+                Studebnt Photo: <input type="file" placeholder="phote" id="student_photo">
+                <hr><br>
 
-                <!-- Transport -->
-                <div class="facility_card">
-                    <div class="facility_icon">🚌</div>
-                    <h2>Transport</h2>
-                    <p>Campus bus service for daily commute.</p>
-                    <label class="radio_box">
-                        <input type="radio" name="transport" value="yes">
-                        <span>Yes, I need transport</span>
-                    </label>
+                <!------------------------------------------------------------------------------------------------>
 
-                    <label class="radio_box">
-                        <input type="radio" name="transport" value="no">
-                        <span>No, not required</span>
-                    </label>
+                <h3> CONTACT DETAILS </h3><br>
+                Student mobile number <input type="tel" placeholder="10-digit number" id="std_ph" required>
+                Parent's mobile number <input type="tel" placeholder="10-digit number" id="parent_ph" required>
+                Student mail Id <input type="email" placeholder="example123@gmail.com" id="std_mail" required>
+                <hr><br>
+
+                <!------------------------------------------------------------------------------------------------>
+
+                <h3> OTHER DETAILS </h3><br>
+                Blood Group
+                <select name="bloodgrp" id="bloodgrp">
+                    <option value="" disabled selected>Select blood group</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select><br>
+
+                Category
+                <select name="category" id="category">
+                    <option value="" disabled selected>Select Category</option>
+                    <option value="gen">General</option>
+                    <option value="OBC">OBC</option>
+                    <option value="SC">SC</option>
+                    <option value="ST">ST</option>
+                    <option value="EWS">EWS</option>
+                </select><br>
+
+                Religion <input type="text" placeholder="Religion..." id="religion" required>
+                <hr><br>
+
+                <!------------------------------------------------------------------------------------------------>
+
+                <h3> PERMANENT ADDRESS </h3><br>
+                Village/City <input type="text" id="p_city" required>
+                Street <input type="text" id="p_street" required>
+                District <input type="text" id="p_dist" required>
+                State <input type="text" id="p_state" required>
+                Country <input type="text" id="p_con" required>
+                PIN Code <input type="number" id="p_pin" required>
+                <hr><br>
+
+                <h3> CURRENT ADDRESS </h3><br>
+                Village/City <input type="text" id="c_city" required>
+                Street <input type="text" id="c_street" required>
+                District <input type="text" id="c_dist" required>
+                State <input type="text" id="c_state" required>
+                Country <input type="text" id="c_con" required>
+                PIN Code <input type="number" id="c_pin" required>
+                <hr><br>
+
+
+                <!------------------------------------------------------------------------------------------------>
+
+                <h3> 10TH STANDARD </h3><br>
+                Board <input type="text" id="10board" required>
+                School Name <input type="text" id="10school" required>
+                Scholl Roll No. <input type="text" id="10roll" required>
+                Passing Year <input type="number" id="10passyear" required>
+                Student Total Mark <input type="number" id="10mark" required>
+                Percentage <input type="number" id="10per" required>
+                10th Marksheet <input type="file" id="marksheet10">
+                Character Certificate <input type="file" id="charactersheet10">
+
+                <h3> 12TH STANDARD </h3><br>
+                Board <input type="text" id="12board" required>
+                Collage Name <input type="text" id="12collage" required>
+                Collage Roll No. <input type="text" id="12roll" required>
+                Passing Year <input type="number" id="12passyear" required>
+                Student Total Mark <input type="number" id="12mark" required>
+                Percentage <input type="number" id="12per" required><br>
+                Stream
+                <select name="Stream" id="Stream">
+                    <option value="" disabled selected>Select Stream</option>
+                    <option value="sci">Science</option>
+                    <option value="com">Commerce</option>
+                    <option value="art">Arts</option>
+                    <option value="vocational">Vocational</option>
+                    <option value="ther">Others</option>
+                </select>
+                12th Marksheet <input type="file" id="marksheet12">
+                Character Certificate <input type="file" id="charactersheet12">
+                <hr><br>
+
+                <!------------------------------------------------------------------------------------------------>
+
+                <h3> IDENTITY INFORMATION </h3>
+                Student Aadhaar Number <input type="number" placeholder="12-digit Aadhaar number" id="aadhaar_num" required>
+                Student ABC Id <input type="number" id="abc" required>
+
+                Student Aadhaar Card <input type="file" id="aadhaar_card">
+                Student Student ignature <input type="file" id="std_sign">
+                <hr><br>
+
+                <!------------------------------------------------------------------------------------------------>
+
+                <h3>FACILITIES</h3>
+
+                <div class="facility_container">
+
+                    <!-- Hostel -->
+                    <div class="facility_card">
+                        <div class="facility_icon">🏠</div>
+                        <h2>Hostel</h2>
+                        <p>On-campus residential accommodation.</p>
+                        <label class="radio_box">
+                            <input type="radio" name="hostel" value="yes">
+                            <span>Yes, I need a hostel</span>
+                        </label>
+
+                        <label class="radio_box">
+                            <input type="radio" name="hostel" value="no">
+                            <span>No, not required</span>
+                        </label>
+                    </div>
+
+
+                    <!-- Transport -->
+                    <div class="facility_card">
+                        <div class="facility_icon">🚌</div>
+                        <h2>Transport</h2>
+                        <p>Campus bus service for daily commute.</p>
+                        <label class="radio_box">
+                            <input type="radio" name="transport" value="yes">
+                            <span>Yes, I need transport</span>
+                        </label>
+
+                        <label class="radio_box">
+                            <input type="radio" name="transport" value="no">
+                            <span>No, not required</span>
+                        </label>
+                    </div>
                 </div>
-            </div>
 
-            <div class="warning_box">
-                <strong>Before you submit —</strong>
-                Double check your Aadhaar number, mobile numbers and board exam registration numbers.
-                These can't be edited once your application is reviewed.
-            </div>
+                <div class="warning_box">
+                    <strong>Before you submit —</strong>
+                    Double check your Aadhaar number, mobile numbers and board exam registration numbers.
+                    These can't be edited once your application is reviewed.
+                </div>
 
-            <br><br><br><button onclick="form_submit()" id="submit"> Submit</button>
-        </div>
+                <br><br><br>
+                <button type="button" onclick="form_submit()" id="submit"> Submit </button>
+            </div>
+        </form>
     </div>
 
     </div>
 
 
     <Script src="working.js"></Script>
+    <script src="verification.js"></script>
 </body>
 
 </html>

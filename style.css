@@ -148,6 +148,18 @@ body {
     box-shadow:0 8px 20px rgba(37,99,235,.35);
 }
 
+.gender_box{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin:15px 0 25px;
+}
+
+.radio_box:has(input:checked){
+    border-color:#8bb825;
+    background:rgba(139,184,37,.15);
+}
+
 /* droup down */
 .admission_form select{
     width:100%;
@@ -176,6 +188,7 @@ body {
     background:#1E293B;
     color:white;
 }
+
 
 /* =======================
       FACILITIES
