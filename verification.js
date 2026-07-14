@@ -1,5 +1,5 @@
 function form_submit() {
-    const student = {};
+    // const student = {};
 
     const std_name = document.getElementById("std_name");
     const f_name = document.getElementById("f_name");
@@ -22,8 +22,15 @@ function form_submit() {
     const religion = document.getElementById("religion");
     const dob = document.getElementById("dob");
 
+    const bld_grp = document.getElementById("bloodgrp").value;
+    const category = document.getElementById("category").value;
+    const stream = document.getElementById("Stream").value;
 
-    //-------------------------- (std , father, mother) name --------------------------------
+    const gender_data = document.getElementById("gender").value;
+
+
+
+    //--------------------------😊 (std , father, mother) name --------------------------------
     if (std_name.value.trim() === "") {
         alert("Enter student name...");
         std_name.focus();
@@ -40,21 +47,21 @@ function form_submit() {
         return;
     }
 
-    //-------------------------- DOB --------------------------------
+    //-------------------------- 📅 DOB --------------------------------
     if (dob.value === "") {
         alert("Please select your Date of Birth.");
         dob.focus();
         return;
     }
 
-    //-------------------------- riligion --------------------------------
+    //-------------------------- ♾️ riligion --------------------------------
     if (religion.value.trim() === "") {
         alert("Enter your religion...");
         religion.focus();
         return;
     }
 
-    //-------------------------- phone number --------------------------------
+    //-------------------------- 📞 phone number --------------------------------
     if (!/^\d{10}$/.test(std_ph)) {
         alert("Invalid Student Phone");
         document.getElementById("std_ph").focus();
@@ -74,7 +81,7 @@ function form_submit() {
         $      → End of the string
     */
 
-    //-------------------------- mail --------------------------------
+    //-------------------------- 📧 mail --------------------------------
     const emailPattern = /^[^\s@]+@gmail\.com$/;
     if (!emailPattern.test(std_mail)) {
         alert("Please enter a valid Gmail address.");
@@ -82,7 +89,7 @@ function form_submit() {
         return;
     }
 
-    //-------------------------- address --------------------------------
+    //-------------------------- 🏡 address --------------------------------
     const p_village = document.getElementById("p_city");
     const c_village = document.getElementById("c_city");
     const p_dist = document.getElementById("p_dist");
@@ -104,13 +111,13 @@ function form_submit() {
         return;
     }
 
-    //-------------------------- pin --------------------------------
+    //-------------------------- 📌  pin --------------------------------
     if (!/^\d{6}$/.test(p_pin) || !/^\d{6}$/.test(c_pin)) {
         alert("Please enter a valid 6-digit PIN.");
         return;
     }
 
-    //-------------------------- 10th --------------------------------
+    //-------------------------- 🔟 10th --------------------------------
     const sboard = document.getElementById("10board");
     const school = document.getElementById("10school");
     const sroll = document.getElementById("10roll");
@@ -147,7 +154,7 @@ function form_submit() {
         return;
     }
 
-    //-------------------------- 12th --------------------------------
+    //-------------------------- 1️⃣2️⃣ 12th --------------------------------
     const cboard = document.getElementById("12board");
     const collage = document.getElementById("12collage");
     const croll = document.getElementById("12roll");
@@ -184,37 +191,37 @@ function form_submit() {
         return;
     }
 
-    //-------------------------- percentage --------------------------------
+    //--------------------------💯  percentage --------------------------------
     if ((percentage10 < 0 || percentage10 > 100) || (percentage12 < 0 || percentage12 > 100)) {
         alert("Enter a valid persentage....");
         return;
     }
 
-    //-------------------------- aadhhar --------------------------------
+    //-------------------------- 🔢 aadhhar --------------------------------
     if (!/^\d{12}$/.test(aadhaar_num)) {
         alert("Please enter a valid Aadhaar Number...");
         document.getElementById("aadhaar_num").focus();
         return;
     }
 
-    //-------------------------- ABC --------------------------------
+    //--------------------------🔢 ABC --------------------------------
     if (abc.value.trim() === "") {
         alert("Please enter the ABC id.....");
         abc.focus();
         return;
     }
 
-    //-------------------------- gender --------------------------------
-    const gender = document.querySelector(
-        'input[name="gender"]:checked'
-    );
+    //--------------------------🧬 gender --------------------------------
+    // const gender = document.querySelector(
+    //     'input[name="gender"]:checked'
+    // );
 
-    if (gender === null) {
-        alert("Please select your gender.");
-        return;
-    }
+    // if (gender === null) {
+    //     alert("Please select your gender.");
+    //     return;
+    // }
 
-    //-------------------------- photo --------------------------------
+    //--------------------------🖼️ photo --------------------------------
     const photo = document.getElementById("student_photo");
     const mark10pic = document.getElementById("marksheet10");
     const char10pic = document.getElementById("charactersheet10");
@@ -259,8 +266,8 @@ function form_submit() {
         return;
     }
 
-    //-------------------------- radio buttons --------------------------------
-    const radioGroups = ["gender", "hostel", "transport"];
+    //--------------------------🔴 radio buttons --------------------------------
+    const radioGroups = ["hostel", "transport"];
     for (const group of radioGroups) {
         if (!document.querySelector(`input[name="${group}"]:checked`)) {
             alert(`Please select ${group}.`);
@@ -268,7 +275,7 @@ function form_submit() {
         }
     }
 
-    //-------------------------- drop down --------------------------------
+    //--------------------------🔽 drop down --------------------------------
     const selects = document.querySelectorAll("#studentForm select");
     for (const select of selects) {
         if (select.value === "") {
@@ -278,29 +285,29 @@ function form_submit() {
         }
     }
 
+    //-------------------------- 📊 Data Base 📊 --------------------------------
+
+    // Create Excel Data
+    const data = [
+        ["Student Name", "Father Name", "Mother Name", "Email", "D.O.B", "Gender", " Student Phone", " Parents Phone", " Student e-mail", " Blood Group",
+            "Category", "Permanent Dist", "Current Dist", "Permanent PIN", "Current PIN", "Collage Name", "Collage Passing Year", "Total mark", "Stream", "Aadhaar Number", "ABC Number"
+        ],
+        [std_name.value.trim(), f_name.value.trim(), m_name.value.trim(), std_mail, dob.value, gender_data, std_ph, parent_ph, std_mail, bld_grp, category,
+        p_dist.value.trim(), c_dist.value.trim(), p_pin, c_pin, collage.value.trim(), pass12_year.value.trim(), tot_12.value.trim(), stream, aadhaar_num, abc.value.trim()
+        ]
+    ];
+
+    // Convert data to worksheet
+    const worksheet = XLSX.utils.aoa_to_sheet(data);
+
+    // Create workbook
+    const workbook = XLSX.utils.book_new();
+
+    // Add worksheet
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Student");
+
+    // Download Excel File
+    XLSX.writeFile(workbook, `${std_name.value.trim()}_Details.xlsx`);
 
 
-    student.std_name = std_name.value.trim();
-    student.f_name = f_name.value.trim();
-    student.m_name = m_name.value.trim();
-
-    student.std_ph = std_ph;
-    student.parent_ph = parent_ph;
-    student.std_mail = std_mail;
-
-    student.religion = religion.value.trim();
-    student.dob = dob.value;
-
-    student.p_pin = p_pin;
-    student.c_pin = c_pin;
-
-    student.percentage10 = percentage10;
-    student.percentage12 = percentage12;
-
-    student.aadhaar = aadhaar_num;
-    student.abc = abc.value.trim();
-
-    student.gender = gender.value;
-
-    console.log(student);
 }

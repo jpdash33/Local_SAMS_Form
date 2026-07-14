@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 
     <title>Local SAMS</title>
 </head>
@@ -79,24 +80,12 @@
                 D.O.B. <input type="date" placeholder="DD/MM/YYYY" id="dob" required>
 
                 Gender
-                <div class="gender_box">
-
-                    <label class="radio_box">
-                        <input type="radio" name="gender" value="Male">
-                        <span>Male</span>
-                    </label>
-
-                    <label class="radio_box">
-                        <input type="radio" name="gender" value="Female">
-                        <span>Female</span>
-                    </label>
-
-                    <label class="radio_box">
-                        <input type="radio" name="gender" value="Other">
-                        <span>Other</span>
-                    </label>
-
-                </div>
+                <select name="gender" id="gender">
+                    <option value="" disabled selected>Select you gender...</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select><br>
 
                 Studebnt Photo: <input type="file" placeholder="phote" id="student_photo">
                 <hr><br>
@@ -180,11 +169,11 @@
                 Stream
                 <select name="Stream" id="Stream">
                     <option value="" disabled selected>Select Stream</option>
-                    <option value="sci">Science</option>
-                    <option value="com">Commerce</option>
-                    <option value="art">Arts</option>
-                    <option value="vocational">Vocational</option>
-                    <option value="ther">Others</option>
+                    <option value="Science">Science</option>
+                    <option value="Commerce">Commerce</option>
+                    <option value="Arts">Arts</option>
+                    <option value="Vocational">Vocational</option>
+                    <option value="Other">Others</option>
                 </select>
                 12th Marksheet <input type="file" id="marksheet12">
                 Character Certificate <input type="file" id="charactersheet12">
